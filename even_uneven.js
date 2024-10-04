@@ -41,25 +41,26 @@ function getRndInteger(min, max) {
 console.log("il computer ha scelto",computer_number);
 
 function input_number_sum(){
-    sum = Number(user_number + computer_number)
+   let sum = Number(user_number + computer_number)
 
     if(sum %2 ==0 && even_uneven === "pari"){
-        alert("HAI VINTO! TOTALE:"),
-        console.log("HAI VINTO! TOTALE:", sum);
+        alert("HAI VINTO!", sum);
+        
         
     } 
     else if( sum %2 ==0 && even_uneven === "dispari"){
-        alert("HAI PERSO! TOTALE:");
-        console.log("HAI PERSO! TOTALE:", sum);
+        alert("HAI PERSO!", sum);
+     
     }
     else if( sum %2 !==0 && even_uneven === "dispari"){
-        alert("HAI VINTO! TOTALE:");
-        console.log("HAI VINTO! TOTALE:", sum);
+        alert("HAI VINTO!", sum);
+        
         }
         else if( sum %2 !==0 && even_uneven === "pari"){
-            alert("HAI PERSO! TOTALE:");
-            console.log("HAI PERSO! TOTALE:", sum);
+            alert("HAI PERSO!", sum);
+            
             }
+            return("il totale è:", sum);
     }
 
 console.log(input_number_sum());
