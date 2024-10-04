@@ -13,3 +13,35 @@ Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
  */
+let even_uneven= prompt("scegli tra pari e dispari")
+if (even_uneven ==="pari"){
+    alert("hai scelto pari")
+    console.log(even_uneven);
+    
+} else if (even_uneven ==="dispari"){
+    alert("hai scelto dispari")
+    console.log(even_uneven);
+}  else {
+    alert("il valore scritto non è un valore valido. Ricarica la pagina e scegli un valore adatto")
+}
+
+
+let user_number= Number(prompt(" ora inserisci un numero da 1 a 5, in base alla decisione di prima"))
+console.log("hai scelto il numero", user_number,);
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+    
+  }
+
+ 
+
+console.log("il computer ha scelto", getRndInteger(1,5));
+
+function input_number_sum(){
+sum = Number(user_number + getRndInteger())
+}
+console.log(input_number_sum);
+
+
