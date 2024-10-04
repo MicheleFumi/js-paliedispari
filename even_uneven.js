@@ -13,8 +13,14 @@ Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
  */
-let even_uneven = prompt("scegli tra pari e dispari")
-if (even_uneven === "pari"){
+
+//creo la variabile di prompt tra pari e dispari
+
+let even_uneven = prompt("scegli tra pari e dispari") 
+
+  // creo la condizione di pari o dispari
+
+if (even_uneven === "pari"){      
     alert("hai scelto pari")
     console.log(even_uneven);
     
@@ -25,10 +31,12 @@ if (even_uneven === "pari"){
     alert("il valore scritto non è un valore valido. Ricarica la pagina e scegli un valore adatto")
 }
 
+// creo la variabile da promptare per l'utente
 
 let user_number = Number(prompt(" ora inserisci un numero da 1 a 5, in base alla decisione di prima"))
 console.log("hai scelto il numero", user_number,);
 
+// creo la funzione random che genera un numero da 1 a 5 e la assegno ad una variabile
 let computer_number = getRndInteger(1,5);
 
 function getRndInteger(min, max) {
@@ -39,6 +47,9 @@ function getRndInteger(min, max) {
  
 
 console.log("il computer ha scelto",computer_number);
+
+// creo la variabile dove sommo le due variabili precendenti e verifico se il risultato è pari o dispari 
+//in base alla scelta dell'utente
 
 function input_number_sum(){
    let sum = Number(user_number + computer_number)
