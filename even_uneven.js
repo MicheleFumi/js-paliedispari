@@ -13,12 +13,12 @@ Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
  */
-let even_uneven= prompt("scegli tra pari e dispari")
-if (even_uneven ==="pari"){
+let even_uneven = prompt("scegli tra pari e dispari")
+if (even_uneven === "pari"){
     alert("hai scelto pari")
     console.log(even_uneven);
     
-} else if (even_uneven ==="dispari"){
+} else if (even_uneven === "dispari"){
     alert("hai scelto dispari")
     console.log(even_uneven);
 }  else {
@@ -26,9 +26,10 @@ if (even_uneven ==="pari"){
 }
 
 
-let user_number= Number(prompt(" ora inserisci un numero da 1 a 5, in base alla decisione di prima"))
+let user_number = Number(prompt(" ora inserisci un numero da 1 a 5, in base alla decisione di prima"))
 console.log("hai scelto il numero", user_number,);
 
+let computer_number = getRndInteger(1,5);
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -37,11 +38,31 @@ function getRndInteger(min, max) {
 
  
 
-console.log("il computer ha scelto", getRndInteger(1,5));
+console.log("il computer ha scelto",computer_number);
 
 function input_number_sum(){
-sum = Number(user_number + getRndInteger())
-}
-console.log(input_number_sum);
+    sum = Number(user_number + computer_number)
+
+    if(sum %2 ==0 && even_uneven === "pari"){
+        alert("HAI VINTO! TOTALE:"),
+        console.log("HAI VINTO! TOTALE:", sum);
+        
+    } 
+    else if( sum %2 ==0 && even_uneven === "dispari"){
+        alert("HAI PERSO! TOTALE:");
+        console.log("HAI PERSO! TOTALE:", sum);
+    }
+    else if( sum %2 !==0 && even_uneven === "dispari"){
+        alert("HAI VINTO! TOTALE:");
+        console.log("HAI VINTO! TOTALE:", sum);
+        }
+        else if( sum %2 !==0 && even_uneven === "pari"){
+            alert("HAI PERSO! TOTALE:");
+            console.log("HAI PERSO! TOTALE:", sum);
+            }
+    }
+
+console.log(input_number_sum());
+
 
 
